@@ -87,7 +87,7 @@ data class SpaceField(val width: Int, val height: Int, val generator: RandomGene
   }
 
   fun updateExplosionCounters() {
-    this.explosions.forEach {it.counterDown()}
+    this.explosions.forEach { it.counterDown() }
   }
 
   private fun initializeShip(): SpaceShip {
@@ -115,7 +115,6 @@ data class SpaceField(val width: Int, val height: Int, val generator: RandomGene
       mass = SpaceFieldConfig.missileMass,
     )
   }
-
 
   private fun createExplosion(explosionPosition: Point2D): Explosion {
     return Explosion(

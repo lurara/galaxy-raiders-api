@@ -99,10 +99,10 @@ class GameEngine(
     this.field.spaceObjects.forEachPair {
         (first, second) ->
       if (first.impacts(second)) {
-        if(first.type == "Missile" && second.type == "Asteroid") {
+        if (first.type == "Missile" && second.type == "Asteroid") {
           this.field.createExplosions(first.center)
         }
-        if(first.type == "Asteroid" && second.type == "Missile") {
+        if (first.type == "Asteroid" && second.type == "Missile") {
           this.field.createExplosions(second.center)
         }
 

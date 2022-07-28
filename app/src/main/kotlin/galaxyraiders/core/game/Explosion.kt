@@ -12,12 +12,12 @@ class Explosion(
 ) :
   SpaceObject("Explosion", '*', initialPosition, initialVelocity, radius, mass) {
 
-    fun counterUp(): Boolean {
-      if (this.counter > 0) return true
-      return false
-    }
-
-    fun counterDown() {
-      this.counter--
-    }
+  fun counterUp(): Boolean {
+    if (this.counter > 0) return true
+    return false
   }
+
+  fun counterDown() {
+    this.counter--
+  }
+}
