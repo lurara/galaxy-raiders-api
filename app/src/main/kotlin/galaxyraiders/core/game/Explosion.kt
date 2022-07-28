@@ -4,9 +4,20 @@ import galaxyraiders.core.physics.Point2D
 import galaxyraiders.core.physics.Vector2D
 
 class Explosion(
-  initialPosition: Point2D,
+  val initialPosition: Point2D,
   initialVelocity: Vector2D,
   radius: Double,
-  mass: Double
+  mass: Double,
+  var counter: Double
 ) :
-  SpaceObject("Explosion", '*', initialPosition, initialVelocity, radius, mass) {}
+  SpaceObject("Explosion", '*', initialPosition, initialVelocity, radius, mass) {
+
+    fun counterUp(): Boolean {
+      if (this.counter > 0) return true
+      return false
+    }
+
+    fun counterDown() {
+      this.counter--
+    }
+  }
